@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HAS | Music Entertainment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&amp;family=Inter:wght@400;500;600&amp;family=Space_Grotesk:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#e3fdff",
+                    "secondary-fixed": "#00eefc",
+                    "surface-bright": "#2c2c2c",
+                    "on-primary-container": "#46003e",
+                    "inverse-primary": "#ae009c",
+                    "on-background": "#ffffff",
+                    "surface-dim": "#0e0e0e",
+                    "inverse-on-surface": "#565554",
+                    "tertiary-fixed": "#e192ff",
+                    "on-primary-fixed": "#000000",
+                    "on-error": "#490013",
+                    "error-dim": "#d73357",
+                    "on-error-container": "#ffb2b9",
+                    "secondary-fixed-dim": "#00deec",
+                    "secondary-container": "#006970",
+                    "on-primary-fixed-variant": "#56004c",
+                    "on-secondary-fixed-variant": "#005e64",
+                    "on-tertiary-container": "#000000",
+                    "inverse-surface": "#fcf8f8",
+                    "error": "#ff6e84",
+                    "on-surface-variant": "#adaaaa",
+                    "on-tertiary": "#390050",
+                    "primary-fixed-dim": "#ff33e4",
+                    "surface-tint": "#ff80e4",
+                    "surface-container-lowest": "#000000",
+                    "error-container": "#a70138",
+                    "on-secondary": "#005359",
+                    "secondary-dim": "#00deec",
+                    "outline-variant": "#494847",
+                    "surface-container-low": "#131313",
+                    "primary": "#f100bd",
+                    "surface-variant": "#262626",
+                    "primary-container": "#ff61e3",
+                    "on-surface": "#ffffff",
+                    "tertiary-dim": "#bb00fc",
+                    "outline": "#777575",
+                    "tertiary-container": "#be0dff",
+                    "surface-container-high": "#201f1f",
+                    "on-secondary-fixed": "#003f43",
+                    "tertiary": "#d674ff",
+                    "on-primary": "#5a0050",
+                    "on-tertiary-fixed": "#2c003f",
+                    "background": "#0e0e0e",
+                    "primary-fixed": "#ff61e3",
+                    "surface": "#0e0e0e",
+                    "surface-container": "#1a1919",
+                    "secondary": "#00eefc",
+                    "on-tertiary-fixed-variant": "#600083",
+                    "primary-dim": "#ff59e3",
+                    "tertiary-fixed-dim": "#d97dff",
+                    "surface-container-highest": "#262626"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/logo.css">
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation (Desktop Only) -->
+<nav id="desktopMenu" class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl hidden md:flex justify-between items-center px-12 h-20 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+<div class="flex items-center gap-3">
+    <div class="logo">
+        <img src="logo/logo2.png" alt="HAS Music Entertainment">
+    </div>
+    <div class="neon-text-flicker">Music Entertainment</div>
+</div>
+<div class="flex gap-8">
+<a class="text-[#adaaaa] font-headline font-bold tracking-tight" href="#home">Inicio</a>
+<a class="text-[#adaaaa] hover:text-white transition-colors font-headline font-bold tracking-tight" href="#schedule">Programación</a>
+<a class="text-[#adaaaa] hover:text-white transition-colors font-headline font-bold tracking-tight" href="#about">Nosotros</a>
+<a class="text-[#adaaaa] hover:text-white transition-colors font-headline font-bold tracking-tight" href="#contact">Contacto</a>
+</div>
+<div class="flex items-center gap-4">
+    <a href="https://www.facebook.com/HasMusicEnter/" target="_blank">
+    <button class="text-[#f100bd] hover:bg-[#fff6fd] rounded-lg p-2 transition-all">
+      <i class="fab fa-facebook-f"></i>
+    </button>
+  </a>
+
+  <a href="https://instagram.com/TU_USUARIO" target="_blank">
+    <button class="text-[#f100bd] hover:bg-[#fff6fd] rounded-lg p-2 transition-all">
+      <i class="fab fa-instagram"></i>
+    </button>
+  </a>
+
+  <a href="https://youtube.com/TU_CANAL" target="_blank">
+    <button class="text-[#f100bd] hover:bg-[#fff6fd] rounded-lg p-2 transition-all">
+      <i class="fab fa-youtube"></i>
+    </button>
+  </a>
+
+  <a href="https://soundcloud.com/TU_USUARIO" target="_blank">
+    <button class="text-[#f100bd] hover:bg-[#fff6fd] rounded-lg p-2 transition-all">
+      <i class="fab fa-soundcloud"></i>
+    </button>
+  </a>
+</div>
+</nav>
+<main class="pt-20 md:pt-20 pb-32">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center px-6 md:px-12 overflow-hidden" id="home">
+<div class="absolute inset-0 z-0">
+<img alt="Estudio HAS Music Entertainment" class="w-full h-full object-cover opacity-40 scale-105" data-alt="Estudio de radio moderno con iluminación neón rosa y cian, equipo futurista y luces desenfocadas" src="logo/fondo.png"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<span class="label-text text-secondary font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Transmisión en vivo desde el vacío</span>
+<h1 class="text-6xl md:text-8xl font-black italic tracking-tighter mb-6 leading-[0.9]">
+                    HAS <br/><span class="text-cyan-400">Music</span><br> <span class="text-primary">Entertainment</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
+                    Ritmos electrónicos curados para la arquitectura de la noche. Únete a la frecuencia donde la realidad se difumina con el ritmo.
+                </p>
+<div class="flex flex-wrap gap-4">
+    <button class="bg-primary hover:bg-primary-container text-on-primary-container px-10 py-4 rounded-full font-label font-bold uppercase tracking-widest flex items-center gap-3 transition-transform active:scale-95 shadow-[0_0_20px_rgba(255,128,228,0.4)] btn-escuchar">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+        Escuchar en vivo
+    </button>
+    <button class="bg-surface-container-high hover:bg-surface-variant border border-secondary/30 text-secondary px-10 py-4 rounded-full font-label font-bold uppercase tracking-widest transition-all btn-programacion">
+        Programación
+    </button>
+</div>
+</div>
+<!-- Asymmetric Accent -->
+<div class="absolute right-0 bottom-1/4 hidden lg:block translate-x-1/2">
+<div class="w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]"></div>
+</div>
+</section>
+<!-- Cuadrícula Pulse (Programación) -->
+<section class="py-24 px-6 md:px-12 bg-surface-container-low" id="schedule">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<h2 class="text-4xl md:text-5xl font-black italic tracking-tighter mb-2">CUADRÍCULA PULSE</h2>
+<p class="text-on-surface-variant font-label tracking-widest uppercase text-sm">Sincronizado con las estrellas</p>
+</div>
+<div class="hidden md:block w-32 h-1 bg-primary/20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+<!-- Large Featured Slot -->
+<div class="md:col-span-8 bg-surface-container-high rounded-xl p-8 flex flex-col justify-end min-h-[400px] relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" data-alt="Close-up of a DJ mixer in a dark club environment with glowing magenta and blue LEDs and smoke effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdktz7E23nr8dhW_MQw8kfYYeq2zBpE_5xxT5VFGdUDCU19hYZDbEDOFnt6k3rkkeyHvX6xtbZelpsWwAM5ZJZXxAo-CdLvY0OVieH6oRzijglup7VIkNlVvZQ9kZa8poxuvdEtmxbGhd2DIVaexRGxxQgl5IFXZjvgR2jtw6u0jMx1Aj0qvVo_3MZnpffjoMu5QJOw0Y5i20wDfBAR41P8AiPuMQiewVRzng9JrOQsPndDLOMX3mRNeLuT1BerFfNbjnDhPKVBg"/>
+<div class="relative z-10">
+<span class="bg-primary text-on-primary text-[10px] px-3 py-1 rounded-full font-label font-bold uppercase mb-4 inline-block">EN VIVO</span>
+<h3 class="text-4xl font-bold mb-2">Protocolo de Medianoche</h3>
+<p class="text-on-surface-variant max-w-md">Exploración de Deep Techno y Melodic House con DJ Neon-X.</p>
+<div class="mt-6 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary">
+<img alt="DJ Neon-X" data-alt="Retrato de un DJ moderno con reflejos neón en sus gafas y atuendo oscuro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3201uKtu0X72e_jLTy2DPai2RsmzzbmSB8IyIAO25jju-oHPf1cYKyhpA2UpjNLmaAeFsRvCH2DolhjF92FN_JbwJXC1w_KsdYswGMfeFwNUCftolCAQtgz5G8rII6_sBn9uE7r48JsEF84sVXrefHYX5aUl52KrM5ZT-ZdrvURwXRzak8ON2AOveXZfJxJTV6ZH57UeApxN9C35ZarxnSI2ZAlcvio1JVCHwBSEsAHps3enaHazGmDJutMZMaSE8e_AQbFazA"/>
+</div>
+<span class="font-label font-bold text-secondary">22:00 — 02:00</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid Side Slots -->
+<div class="md:col-span-4 grid grid-rows-2 gap-4">
+<div class="bg-surface-container p-6 rounded-xl hover:bg-surface-container-highest transition-colors flex flex-col justify-between">
+<div>
+<span class="text-on-surface-variant text-xs font-label uppercase">Siguiente</span>
+<h4 class="text-xl font-bold mt-1">Solar Drift</h4>
+</div>
+<span class="text-primary font-label text-sm">Tomorrow 08:00</span>
+</div>
+<div class="bg-surface-container p-6 rounded-xl hover:bg-surface-container-highest transition-colors flex flex-col justify-between border-l-4 border-secondary/50">
+<div>
+<span class="text-on-surface-variant text-xs font-label uppercase">Evento Especial</span>
+<h4 class="text-xl font-bold mt-1">Arquitectos del Sonido</h4>
+</div>
+<span class="text-secondary font-label text-sm">Friday 20:00</span>
+</div>
+</div>
+<!-- Small Grid Items -->
+<div class="md:col-span-3 bg-surface-container p-6 rounded-xl flex items-center gap-4">
+<div class="text-3xl font-black text-outline-variant font-label">01</div>
+<div>
+<h5 class="font-bold">Ethereal Flux</h5>
+<p class="text-xs text-on-surface-variant">Ambient Journeys</p>
+</div>
+</div>
+<div class="md:col-span-3 bg-surface-container p-6 rounded-xl flex items-center gap-4">
+<div class="text-3xl font-black text-outline-variant font-label">02</div>
+<div>
+<h5 class="font-bold">The Bassment</h5>
+<p class="text-xs text-on-surface-variant">Industrial Beats</p>
+</div>
+</div>
+<div class="md:col-span-6 bg-surface-container p-6 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="text-3xl font-black text-outline-variant font-label">03</div>
+<h5 class="font-bold">Resonancia Global <span class="ml-2 text-[10px] text-tertiary">PODCAST</span></h5>
+</div>
+<span class="material-symbols-outlined text-tertiary">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- Architects (About) -->
+<section class="py-24 px-6 md:px-12 relative" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative">
+<div class="aspect-square bg-surface-container rounded-3xl overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="Dynamic shot of a high-end digital radio transmission tower at night with purple lighting and lens flare" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_pNGeQtoKAmRM--2YSLhw0FcqvbMvT6aGze9l1f8EeqQkgQGD68Uzmu-egwVT-Kfml6uN08IG_u91nx6MRhwIIxjBHV7CJAIDuOFbsDkuV3lViuACXusoft4TwTkmI3XMCxpjFn644jXYU25cLbabjwQVxX7ZxHjlCGXQ7XcmTXchR6hoW9WOmRwFSlNsmuhWRhJZ9lpr0zToTzaO2l8D_0HX0Q0evTcWXjLyBdjo7-pEAJld26LGmy200dTITIP7qNbpj43fDQ"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+<div class="absolute -bottom-8 -right-8 w-64 h-64 bg-secondary/10 blur-3xl -z-10"></div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="text-4xl md:text-5xl font-black italic tracking-tighter mb-8 leading-none">LOS ARQUITECTOS <br/>DEL SONIDO</h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+<p>HAS Music Entertainment se fundó en el underground digital como respuesta a la homogeneización del sonido. No solo transmitimos; diseñamos entornos auditivos.</p>
+<p>Basados en los corredores bañados de neón del centro urbano, nuestra emisora opera como un pulso 24/7, conectando oyentes con lo más avanzado de la cultura electrónica global a través de transmisiones de alta fidelidad y narrativas nocturnas curadas.</p>
+<div class="flex gap-12 mt-12 border-t border-outline-variant/20 pt-8">
+<div>
+<span class="block text-3xl font-black text-primary font-headline">24/7</span>
+<span class="label-text text-xs uppercase tracking-widest">Transmisión</span>
+</div>
+<div>
+<span class="block text-3xl font-black text-secondary font-headline">12+</span>
+<span class="label-text text-xs uppercase tracking-widest">Creadores</span>
+</div>
+<div>
+<span class="block text-3xl font-black text-tertiary font-headline">50k+</span>
+<span class="label-text text-xs uppercase tracking-widest">Latidos</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Send a Signal (Contact) -->
+<section class="py-24 px-6 md:px-12 bg-surface-container" id="contact">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black italic tracking-tighter mb-4">ENVÍA UNA SEÑAL</h2>
+      <p class="text-on-surface-variant label-text uppercase tracking-widest">
+        Envía un demo o un mensaje a la frecuencia
+      </p>
+    </div>
+
+    <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <div class="flex flex-col gap-2">
+        <label class="label-text text-xs text-secondary uppercase font-bold px-2">Identificación</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required
+          class="bg-surface-container-highest border-none rounded-xl p-4"/>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="label-text text-xs text-secondary uppercase font-bold px-2">Frecuencia</label>
+        <input id="email" name="email" type="email" placeholder="Tu correo" required
+          class="bg-surface-container-highest border-none rounded-xl p-4"/>
+      </div>
+
+      <div class="md:col-span-2 flex flex-col gap-2">
+        <label class="label-text text-xs text-secondary uppercase font-bold px-2">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required
+          placeholder="Transmite tus pensamientos..."
+          class="bg-surface-container-highest border-none rounded-xl p-4 resize-none"></textarea>
+      </div>
+
+      <!-- Campos ocultos -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nueva señal recibida 🔊">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none">
+
+      <div class="md:col-span-2 text-center mt-4">
+        <button id="btnEnviar" type="submit"
+          class="bg-secondary text-black px-12 py-4 rounded-full font-bold uppercase transition-all">
+          Transmitir señal
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</section>
+
+<!-- Mensaje flotante -->
+<div id="mensajeExito" class="mensaje-exito">
+  Señal enviada 🔊
+</div>
+
+</main>
+<!-- Footer Copyright -->
+<footer class="bg-[#131313]/95 backdrop-blur-md flex flex-col md:flex-row justify-between items-center px-8 py-6 w-full mb-44 md:mb-20">
+<div class="font-['Space_Grotesk'] text-xs text-[#adaaaa]">© 2024 HAS Music Entertainment.</div>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="font-['Space_Grotesk'] text-xs text-[#adaaaa] hover:text-white transition-colors" href="#">Privacidad</a>
+<a class="font-['Space_Grotesk'] text-xs text-[#adaaaa] hover:text-white transition-colors" href="#">Términos</a>
+<a class="font-['Space_Grotesk'] text-xs text-[#adaaaa] hover:text-white transition-colors" href="#"></a>
+</div>
+</footer>
+
+<div id="donate-button-container" class="paypal-float-container">
+  <div id="donate-button"></div>
+</div>
+
+
+
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-6 left-0 right-0 mx-auto flex justify-around items-center px-4 py-2 bg-[#1a1919]/90 backdrop-blur-lg w-[90%] rounded-full z-50 border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
+    <a class="flex flex-col items-center justify-center p-3" href="#home">
+        <span class="material-symbols-outlined">home</span>
+        <span class="text-[10px] font-headline uppercase tracking-widest mt-1 text-white">Inicio</span>
+    </a>
+    <a class="flex flex-col items-center justify-center p-3" href="#schedule">
+        <span class="material-symbols-outlined">calendar_month</span>
+        <span class="text-[10px] font-headline uppercase tracking-widest mt-1 text-white">Programación</span>
+    </a>
+    <a class="flex flex-col items-center justify-center p-3" href="#about">
+        <span class="material-symbols-outlined">info</span>
+        <span class="text-[10px] font-headline uppercase tracking-widest mt-1 text-white">Nosotros</span>
+    </a>
+    <a class="flex flex-col items-center justify-center p-3" href="#contact">
+        <span class="material-symbols-outlined">mail</span>
+        <span class="text-[10px] font-headline uppercase tracking-widest mt-1 text-white">Contacto</span>
+    </a>
+</nav>
+<!-- Global Sticky Music Player (Simplificado - Solo radio) -->
+<div class="fixed top-0 md:top-auto md:bottom-0 left-0 right-0 h-16 md:h-20 bg-surface-container-highest/60 backdrop-blur-2xl border-b md:border-b-0 md:border-t border-white/5 z-[60] px-4 md:px-12 flex items-center justify-between">
+    <!-- Info de la canción -->
+    <div class="flex items-center gap-3 md:gap-4">
+        <div class="relative hidden sm:block">
+            <div class="w-10 h-10 md:w-12 md:h-12 rounded bg-surface-container-highest overflow-hidden">
+                <img alt="Now Playing Cover" src="logo/HAS neon.png"/>
+            </div>
+            <div class="absolute -top-1 -right-1 w-2.5 h-2.5 md:w-3 md:h-3 bg-primary rounded-full shadow-[0_0_8px_#ff80e4]"></div>
+        </div>
+        <div>
+            <h6 class="text-xs md:text-sm font-bold truncate">Has Music Entertainment</h6>
+            <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                <span class="label-text text-[9px] md:text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold">EN VIVO</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Controles centrales: Solo Play/Pause -->
+    <div class="flex items-center">
+        <button class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary flex items-center justify-center text-on-primary-container hover:scale-105 active:scale-95 transition-all shadow-[0_0_15px_rgba(255,128,228,0.3)]" id="playPauseBtn">
+            <span class="material-symbols-outlined text-2xl md:text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+        </button>
+    </div>
+    
+    <!-- Control de volumen (solo icono) -->
+    <div class="flex items-center gap-2">
+        <button id="volumeBtn" class="material-symbols-outlined text-on-surface-variant hover:text-white transition-colors text-2xl md:text-3xl">volume_up</button>
+    </div>
+
+</div>
+
+<script src="js/navigation.js"></script>
+<script src="js/player.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/paypal.js"></script>
+</body>
+</html>
