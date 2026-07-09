@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="es"><head>
+<html class="dark" lang="es">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>HAS | Music Entertainment</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="icon" type="image/x-icon" href="logo/favico.ico">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&amp;family=Inter:wght@400;500;600&amp;family=Space_Grotesk:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -84,13 +86,49 @@
     <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
 <link rel="stylesheet" href="css/style.css"/>
 <link rel="stylesheet" href="css/logo.css">
+<link rel="stylesheet" href="css/prepw.css">
+<link rel="stylesheet" href="css/fuentes.css">
 </head>
 <body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+ 
+  <!-- PRE CARGA -->
+<div id="cinematic-loader">
+
+    <!-- FONDO -->
+    <div class="bg"></div>
+
+    <!-- PARTICULAS -->
+    <div id="particles"></div>
+
+    <!-- HUMO -->
+    <div class="smoke smoke-left"></div>
+    <div class="smoke smoke-right"></div>
+
+    <!-- SCANLINES -->
+    <div class="scanlines"></div>
+
+    <!-- FLASH -->
+    <div class="flash"></div>
+
+    <!-- LOGO -->
+    <div class="logo-wrapper">
+
+        <img src="logo/NEON.png" class="cinema-logo">
+
+    </div>
+
+    <!-- PORCENTAJE -->
+    <div class="loader-percent">
+        <span id="percent">0%</span>
+    </div>
+
+
+</div>
 <!-- Top Navigation (Desktop Only) -->
 <nav id="desktopMenu" class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl hidden md:flex justify-between items-center px-12 h-20 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
 <div class="flex items-center gap-3">
-    <div class="logo">
-        <img src="logo/logo2.png" alt="HAS Music Entertainment">
+    <div class="logo-menu">
+        <img src="logo/NEON.png" alt="HAS Music Entertainment">
     </div>
     <div class="neon-text-flicker">Music Entertainment</div>
 </div>
@@ -107,19 +145,19 @@
     </button>
   </a>
 
-  <a href="https://instagram.com/TU_USUARIO" target="_blank">
+  <a href="" target="_blank">
     <button class="text-[#f100bd] hover:bg-[#fff6fd] rounded-lg p-2 transition-all">
       <i class="fab fa-instagram"></i>
     </button>
   </a>
 
-  <a href="https://youtube.com/TU_CANAL" target="_blank">
+  <a href="" target="_blank">
     <button class="text-[#f100bd] hover:bg-[#fff6fd] rounded-lg p-2 transition-all">
       <i class="fab fa-youtube"></i>
     </button>
   </a>
 
-  <a href="https://soundcloud.com/TU_USUARIO" target="_blank">
+  <a href="" target="_blank">
     <button class="text-[#f100bd] hover:bg-[#fff6fd] rounded-lg p-2 transition-all">
       <i class="fab fa-soundcloud"></i>
     </button>
@@ -135,8 +173,24 @@
 </div>
 <div class="relative z-10 max-w-4xl">
 <span class="label-text text-secondary font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Transmisión en vivo desde el vacío</span>
-<h1 class="text-6xl md:text-8xl font-black italic tracking-tighter mb-6 leading-[0.9]">
-                    HAS <br/><span class="text-cyan-400">Music</span><br> <span class="text-primary">Entertainment</span>
+<h1 class="hero-title
+    text-5xl
+    sm:text-6xl
+    md:text-7xl
+    lg:text-8xl
+    xl:text-[8rem]
+    2xl:text-[10rem]
+    tracking-tight
+    leading-[0.9]
+    mb-6">
+
+    <span class="uppercase">has</span><br>
+
+    <span class="capitalize text-cyan-400">music</span><br>
+
+    <span class="capitalize text-primary">entertainment</span>
+
+</h1>
 </h1>
 <p class="text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
                     Ritmos electrónicos curados para la arquitectura de la noche. Únete a la frecuencia donde la realidad se difumina con el ritmo.
@@ -384,5 +438,6 @@
 <script src="js/contact.js"></script>
 <script src="js/particles.js"></script>
 <script src="js/paypal.js"></script>
+<script src="js/pgcarga.js"></script>
 </body>
 </html>

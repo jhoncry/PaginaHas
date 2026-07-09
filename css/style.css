@@ -231,3 +231,24 @@ h1, h2, h3, h4, h5, h6,
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+/* fuente de letra */
+
+@font-face {
+    font-family: 'Serpentine';
+    src: url('../fonts/Serpentine Sans ICG Oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+.hero-title {
+    font-family: 'Serpentine', sans-serif !important;
+    font-style:italic;
+    transform:skewX(-10deg);
+    letter-spacing:3px;
+    text-transform:uppercase;
+    text-shadow:
+        3px 3px 8px rgba(0,0,0,.45);
+    font-size: clamp(2.5rem, 8vw, 10rem);
+    line-height: .9;
+}

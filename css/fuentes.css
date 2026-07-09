@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Serpentine';
+    src: url('fuentes.css') format('truetype');
+    font-style: italic;
+    font-weight: normal;
+}
+
+.hero-title{
+    font-family: 'Serpentine', sans-serif;
+    font-style: italic;
+}
