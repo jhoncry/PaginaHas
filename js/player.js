@@ -8,12 +8,14 @@ let isPlaying = false;
 let currentVolume = 0.8; // Volumen inicial 80%
 let isMuted = false;
 let previousVolume = 0.8;
+let audio = null;
+const streamUrl = 'https://stream.zeno.fm/qcfwqxfgps8uv'; // <--- CAMBIA AQUÍ TU URL DE ZENO
 
-// Crear elemento de audio
-const audio = new Audio();
-audio.src = 'https://stream.zeno.fm/qcfwqxfgps8uv'; // <--- CAMBIA AQUÍ TU URL DE ZENO
-audio.loop = false; // <--- CAMBIA A false (los streams en vivo no necesitan loop)
-audio.volume = currentVolume;
+function createAudio() {
+    audio = new Audio(streamUrl);
+    audio.loop = false;
+    audio.volume = currentVolume;
+}
 
 // Crear control deslizante de volumen flotante
 let volumeSlider = null;
@@ -174,7 +176,9 @@ function updateVolumeUI() {
 // Función para cambiar el volumen
 window.setVolume = function(volume) {
     currentVolume = Math.max(0, Math.min(1, volume));
-    audio.volume = currentVolume;
+    if (audio) {
+        audio.volume = currentVolume;
+    }
     updateVolumeUI();
     console.log(`Volumen: ${Math.round(currentVolume * 100)}%`);
 };
@@ -192,6 +196,10 @@ window.toggleMute = function() {
 // Iniciar reproducción
 window.playAudio = function() {
     if (!isPlaying) {
+        if (!audio) {
+            createAudio();
+        }
+
         isPlaying = true;
         const icon = playBtn.querySelector('.material-symbols-outlined');
         if (icon) icon.innerText = 'pause';
@@ -210,13 +218,16 @@ window.playAudio = function() {
 };
 
 window.pauseAudio = function() {
-    if (isPlaying) {
+    if (isPlaying && audio) {
         isPlaying = false;
         const icon = playBtn.querySelector('.material-symbols-outlined');
         if (icon) icon.innerText = 'play_arrow';
         playBtn.classList.remove('bg-secondary');
         playBtn.classList.add('bg-primary');
         audio.pause();
+        audio.src = '';
+        audio.load();
+        audio = null;
     }
 };
 
