@@ -19,15 +19,37 @@ audio.volume = currentVolume;
 let volumeSlider = null;
 let volumePopup = null;
 
+function updateVolumePopupPosition() {
+    if (!volumePopup) return;
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    if (isMobile) {
+        volumePopup.style.top = '80px';
+        volumePopup.style.bottom = 'auto';
+        volumePopup.style.right = '15px';
+    } else {
+        volumePopup.style.top = 'auto';
+        volumePopup.style.bottom = '80px';
+        volumePopup.style.right = '30px';
+    }
+}
+ 
 // Función para crear el popup de volumen
 function createVolumePopup() {
     if (volumePopup) return;
     
     volumePopup = document.createElement('div');
     volumePopup.style.position = 'fixed';
-    volumePopup.style.bottom = '80px';
     volumePopup.style.right = '30px';
     volumePopup.style.backgroundColor = '#1a1919';
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    if (isMobile) {
+        volumePopup.style.top = '80px';
+        volumePopup.style.bottom = 'auto';
+        volumePopup.style.right = '15px';
+    } else {
+        volumePopup.style.bottom = '80px';
+        volumePopup.style.top = 'auto';
+    }
     volumePopup.style.backdropFilter = 'blur(20px)';
     volumePopup.style.borderRadius = '20px';
     volumePopup.style.padding = '15px';
@@ -88,7 +110,9 @@ function createVolumePopup() {
     volumePopup.appendChild(sliderContainer);
     volumePopup.appendChild(percentText);
     document.body.appendChild(volumePopup);
-    
+    updateVolumePopupPosition();
+    window.addEventListener('resize', updateVolumePopupPosition);
+     
     // Función para actualizar el volumen desde el popup
     function updateVolumeFromPosition(clientY) {
         const rect = sliderContainer.getBoundingClientRect();

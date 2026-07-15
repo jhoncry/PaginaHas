@@ -367,17 +367,158 @@
 </main>
 <!-- Footer Copyright -->
 <footer class="bg-[#131313]/95 backdrop-blur-md flex flex-col md:flex-row justify-between items-center px-8 py-6 w-full mb-44 md:mb-20">
-<div class="font-['Space_Grotesk'] text-xs text-[#adaaaa]">© 2024 HAS Music Entertainment.</div>
+<div class="font-headline text-xs text-[#adaaaa]">© 2024 HAS Music Entertainment.</div>
 <div class="flex gap-6 mt-4 md:mt-0">
-<a class="font-['Space_Grotesk'] text-xs text-[#adaaaa] hover:text-white transition-colors" href="#">Privacidad</a>
-<a class="font-['Space_Grotesk'] text-xs text-[#adaaaa] hover:text-white transition-colors" href="#">Términos</a>
-<a class="font-['Space_Grotesk'] text-xs text-[#adaaaa] hover:text-white transition-colors" href="#"></a>
+<a id="privacyLink" class="font-headline text-xs text-[#adaaaa] hover:text-white transition-colors cursor-pointer" href="#">Privacidad</a>
+<a id="termsLink" class="font-headline text-xs text-[#adaaaa] hover:text-white transition-colors cursor-pointer" href="#">Términos</a>
+<a class="font-headline text-xs text-[#adaaaa] hover:text-white transition-colors" href="#"></a>
 </div>
 </footer>
 
-<div id="donate-button-container" class="paypal-float-container">
-  <div id="donate-button"></div>
+<div id="termsModal" class="hidden modal-overlay fixed inset-0 z-50 items-center justify-center p-4">
+  <div class="modal-backdrop absolute inset-0"></div>
+  <div class="modal-content relative w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-[2rem] border border-white/10 bg-[#111111]/95 shadow-[0_0_80px_rgba(241,0,189,0.18)] backdrop-blur-xl">
+    <button id="closeTermsModal" class="modal-close absolute top-4 right-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#0e0e0e]/90 text-white shadow-[0_0_20px_rgba(255,255,255,0.08)] hover:bg-[#1a1919]/95 transition">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="modal-inner h-full overflow-y-auto p-8 text-on-surface-variant">
+      <article class="space-y-6">
+        <header>
+          <h2 class="text-4xl font-black text-white">TÉRMINOS Y CONDICIONES</h2>
+          <p class="mt-3 text-sm text-secondary">Última actualización: Julio de 2026</p>
+        </header>
+        <section class="space-y-4">
+          <p>Bienvenido a <strong>HAS MUSIC ENTERTAINMENT</strong>.</p>
+          <p>Al acceder y utilizar este sitio web, aceptas los presentes Términos y Condiciones.</p>
+        </section>
+        <section class="space-y-3">
+          <h3 class="text-2xl font-bold text-white">1. Uso del sitio</h3>
+          <p>El contenido ofrecido tiene fines informativos y de entretenimiento.</p>
+          <p>El usuario se compromete a utilizar el sitio de forma responsable y conforme a la legislación aplicable.</p>
+        </section>
+        <section class="space-y-3">
+          <h3 class="text-2xl font-bold text-white">2. Propiedad intelectual</h3>
+          <p>Todo el contenido del sitio, incluyendo:</p>
+          <ul class="list-disc list-inside space-y-1 text-on-surface-variant pl-4">
+            <li>Diseño.</li>
+            <li>Logotipo.</li>
+            <li>Marca.</li>
+            <li>Imágenes.</li>
+            <li>Textos.</li>
+            <li>Código fuente.</li>
+            <li>Elementos gráficos.</li>
+          </ul>
+          <p>pertenece a HAS MUSIC ENTERTAINMENT o se utiliza con la autorización correspondiente.</p>
+          <p>Queda prohibida su reproducción, distribución o modificación sin autorización previa.</p>
+        </section>
+        <section class="space-y-3">
+          <h3 class="text-2xl font-bold text-white">3. Contenido musical</h3>
+          <p>HAS MUSIC ENTERTAINMENT funciona como una plataforma de difusión y entretenimiento musical.</p>
+          <p>Los derechos de autor de las obras musicales pertenecen a sus respectivos autores, intérpretes, productores o titulares de derechos.</p>
+        </section>
+        <section class="space-y-3">
+          <h3 class="text-2xl font-bold text-white">4. Disponibilidad del servicio</h3>
+          <p>Aunque procuramos mantener el sitio disponible de manera continua, no garantizamos que el servicio esté libre de interrupciones, errores o mantenimientos programados.</p>
+        </section>
+        <section class="space-y-3">
+          <h3 class="text-2xl font-bold text-white">5. Enlaces externos</h3>
+          <p>Este sitio puede incluir enlaces hacia páginas de terceros.</p>
+          <p>HAS MUSIC ENTERTAINMENT no controla ni asume responsabilidad por el contenido, políticas o servicios ofrecidos por dichos sitios.</p>
+        </section>
+        <section class="space-y-3">
+          <h3 class="text-2xl font-bold text-white">6. Limitación de responsabilidad</h3>
+          <p>HAS MUSIC ENTERTAINMENT no será responsable por daños directos o indirectos derivados del uso del sitio, interrupciones del servicio o problemas ocasionados por terceros.</p>
+        </section>
+        <section class="space-y-3">
+          <h3 class="text-2xl font-bold text-white">7. Modificaciones</h3>
+          <p>Nos reservamos el derecho de modificar el contenido del sitio, así como estos Términos y Condiciones, en cualquier momento y sin previo aviso.</p>
+        </section>
+        <section class="space-y-3">
+          <h3 class="text-2xl font-bold text-white">8. Legislación aplicable</h3>
+          <p>Estos Términos y Condiciones se regirán por la legislación vigente de la República del Perú.</p>
+        </section>
+      </article>
+    </div>
+  </div>
 </div>
+
+  <div id="privacyModal" class="hidden modal-overlay fixed inset-0 z-50 items-center justify-center p-4">
+    <div class="modal-backdrop absolute inset-0"></div>
+    <div class="modal-content relative w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-[2rem] border border-white/10 bg-[#111111]/95 shadow-[0_0_80px_rgba(241,0,189,0.18)] backdrop-blur-xl">
+      <button id="closePrivacyModal" class="modal-close absolute top-4 right-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#0e0e0e]/90 text-white shadow-[0_0_20px_rgba(255,255,255,0.08)] hover:bg-[#1a1919]/95 transition">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div class="modal-inner h-full overflow-y-auto p-8 text-on-surface-variant">
+        <article class="space-y-6">
+          <header>
+            <h2 class="text-4xl font-black text-white">POLÍTICA DE PRIVACIDAD</h2>
+            <p class="mt-3 text-sm text-secondary">Última actualización: Julio de 2026</p>
+          </header>
+          <section class="space-y-4">
+            <p>Bienvenido a <strong>HAS MUSIC ENTERTAINMENT</strong>.</p>
+            <p>En HAS MUSIC ENTERTAINMENT respetamos la privacidad de nuestros visitantes y nos comprometemos a proteger la información que pueda ser proporcionada durante el uso de nuestro sitio web.</p>
+          </section>
+          <section class="space-y-3">
+            <h3 class="text-2xl font-bold text-white">1. Información que recopilamos</h3>
+            <p>Nuestro sitio puede recopilar información cuando el usuario:</p>
+            <ul class="list-disc list-inside space-y-1 text-on-surface-variant pl-4">
+              <li>Completa un formulario de contacto.</li>
+              <li>Se suscribe para recibir novedades.</li>
+              <li>Se comunica con nosotros mediante correo electrónico.</li>
+              <li>Navega por el sitio web.</li>
+            </ul>
+            <p>La información puede incluir:</p>
+            <ul class="list-disc list-inside space-y-1 text-on-surface-variant pl-4">
+              <li>Nombre.</li>
+              <li>Dirección de correo electrónico.</li>
+              <li>Dirección IP (recopilada automáticamente por el navegador o servicios de alojamiento).</li>
+              <li>Información técnica del dispositivo y navegador.</li>
+            </ul>
+          </section>
+          <section class="space-y-3">
+            <h3 class="text-2xl font-bold text-white">2. Uso de la información</h3>
+            <p>La información recopilada podrá utilizarse para:</p>
+            <ul class="list-disc list-inside space-y-1 text-on-surface-variant pl-4">
+              <li>Responder consultas.</li>
+              <li>Mejorar la experiencia del usuario.</li>
+              <li>Enviar información relacionada con nuestros servicios, únicamente cuando el usuario lo solicite.</li>
+              <li>Mantener la seguridad del sitio web.</li>
+            </ul>
+          </section>
+          <section class="space-y-3">
+            <h3 class="text-2xl font-bold text-white">3. Cookies</h3>
+            <p>Nuestro sitio puede utilizar cookies para mejorar la navegación y analizar el uso del sitio.</p>
+            <p>El usuario puede deshabilitar las cookies desde la configuración de su navegador.</p>
+          </section>
+          <section class="space-y-3">
+            <h3 class="text-2xl font-bold text-white">4. Protección de la información</h3>
+            <p>Adoptamos medidas razonables para proteger la información almacenada contra accesos no autorizados, alteraciones o divulgaciones.</p>
+          </section>
+          <section class="space-y-3">
+            <h3 class="text-2xl font-bold text-white">5. Servicios de terceros</h3>
+            <p>Nuestro sitio puede contener enlaces a servicios externos, redes sociales o plataformas de streaming. HAS MUSIC ENTERTAINMENT no es responsable de las políticas de privacidad de dichos servicios.</p>
+          </section>
+          <section class="space-y-3">
+            <h3 class="text-2xl font-bold text-white">6. Derechos del usuario</h3>
+            <p>El usuario puede solicitar:</p>
+            <ul class="list-disc list-inside space-y-1 text-on-surface-variant pl-4">
+              <li>Acceder a la información proporcionada.</li>
+              <li>Corregir sus datos.</li>
+              <li>Solicitar la eliminación de su información.</li>
+            </ul>
+          </section>
+          <section class="space-y-3">
+            <h3 class="text-2xl font-bold text-white">7. Cambios en esta política</h3>
+            <p>Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Los cambios serán publicados en esta misma página.</p>
+          </section>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div id="donate-button-container" class="paypal-float-container">
+    <div id="donate-button"></div>
+  </div>
 
 
 
@@ -439,5 +580,71 @@
 <script src="js/particles.js"></script>
 <script src="js/paypal.js"></script>
 <script src="js/pgcarga.js"></script>
+<script>
+  const termsLink = document.getElementById('termsLink');
+  const privacyLink = document.getElementById('privacyLink');
+  const termsModal = document.getElementById('termsModal');
+  const privacyModal = document.getElementById('privacyModal');
+  const closeTermsModal = document.getElementById('closeTermsModal');
+  const closePrivacyModal = document.getElementById('closePrivacyModal');
+
+  function openModal(modal, event) {
+    if (event) event.preventDefault();
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(modal) {
+    if (!modal) return;
+    modal.classList.add('hidden');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (termsLink && termsModal) {
+    termsLink.addEventListener('click', (event) => openModal(termsModal, event));
+  }
+
+  if (privacyLink && privacyModal) {
+    privacyLink.addEventListener('click', (event) => openModal(privacyModal, event));
+  }
+
+  if (closeTermsModal) {
+    closeTermsModal.addEventListener('click', () => closeModal(termsModal));
+  }
+
+  if (closePrivacyModal) {
+    closePrivacyModal.addEventListener('click', () => closeModal(privacyModal));
+  }
+
+  if (termsModal) {
+    termsModal.addEventListener('click', (event) => {
+      if (event.target === termsModal) {
+        closeModal(termsModal);
+      }
+    });
+  }
+
+  if (privacyModal) {
+    privacyModal.addEventListener('click', (event) => {
+      if (event.target === privacyModal) {
+        closeModal(privacyModal);
+      }
+    });
+  }
+
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      if (termsModal && !termsModal.classList.contains('hidden')) {
+        closeModal(termsModal);
+      }
+      if (privacyModal && !privacyModal.classList.contains('hidden')) {
+        closeModal(privacyModal);
+      }
+    }
+  });
+</script>
 </body>
 </html>

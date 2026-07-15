@@ -109,8 +109,9 @@ h1, h2, h3, h4, h5, h6,
 /* Contenedor del botón flotante */
     .paypal-float-container {
         position: fixed;
-        bottom: 100px;
+        top: 50%;
         right: 20px;
+        transform: translateY(-50%);
         z-index: 9999;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -118,23 +119,23 @@ h1, h2, h3, h4, h5, h6,
 
     /* Efecto hover */
     .paypal-float-container:hover {
-        transform: scale(1.08);
+        transform: translateY(-50%) scale(1.08);
         filter: drop-shadow(0 0 20px rgba(241, 0, 189, 0.5));
     }
 
     /* Efecto de clic */
     .paypal-float-container:active {
-        transform: scale(0.95);
+        transform: translateY(-50%) scale(0.95);
     }
 
     /* Animación de entrada */
     @keyframes floatIn {
         from {
-            transform: translateX(100px);
+            transform: translate(100px, -50%);
             opacity: 0;
         }
         to {
-            transform: translateX(0);
+            transform: translate(0, -50%);
             opacity: 1;
         }
     }
@@ -174,8 +175,18 @@ h1, h2, h3, h4, h5, h6,
     /* Responsive para móviles */
     @media (max-width: 768px) {
         .paypal-float-container {
-            bottom: 85px;
+            top: 50%;
+            bottom: auto;
             right: 15px;
+            transform: translateY(-50%);
+        }
+        
+        .paypal-float-container:hover {
+            transform: translateY(-50%) scale(1.08);
+        }
+        
+        .paypal-float-container:active {
+            transform: translateY(-50%) scale(0.95);
         }
         
         .paypal-float-container img {
@@ -207,6 +218,62 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* FORMULARIO DE CONTACTO */
+
+.modal-overlay {
+    display: none;
+    z-index: 99999;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-backdrop {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(16px);
+}
+
+.modal-content {
+    animation: modalIn 0.35s ease-out;
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+.modal-inner {
+    max-height: calc(90vh - 2rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal-close {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.modal-inner h2,
+.modal-inner h3,
+.modal-inner p,
+.modal-inner ul {
+    font-family: 'Inter', sans-serif;
+}
+
+.modal-inner {
+    padding-bottom: 3rem;
+}
+
+.modal-inner ul {
+    margin-top: 0.5rem;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 
 .mensaje-exito {
   position: fixed;
