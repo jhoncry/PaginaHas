@@ -168,8 +168,8 @@
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center px-6 md:px-12 overflow-hidden" id="home">
 <div class="absolute inset-0 z-0">
-<img alt="Estudio HAS Music Entertainment" class="w-full h-full object-cover opacity-40 scale-105" data-alt="Estudio de radio moderno con iluminación neón rosa y cian, equipo futurista y luces desenfocadas" src="logo/fondo.png"/>
-<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+<div id="vanta-bg" class="w-full h-full absolute inset-0"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/30 to-transparent"></div>
 </div>
 <div class="relative z-10 max-w-4xl">
 <span class="label-text text-secondary font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Transmisión en vivo desde el vacío</span>
@@ -573,6 +573,10 @@
     </div>
 
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+
+<script src="js/main.js"></script>
 
 <script src="js/navigation.js"></script>
 <script src="js/player.js"></script>
